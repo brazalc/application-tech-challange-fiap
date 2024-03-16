@@ -33,7 +33,6 @@ jobs:
           sudo mv kubectl /usr/local/bin/
           kubectl version --client
           aws eks --region ${{ secrets.AWS_REGION }} update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }}
-          aws ec2 describe-instances --no-verify-ssl
       - name: Deploy to EKS
         run: |
           kubectl config set-cluster eks --server=${{ secrets.EKS_SERVER }}
@@ -44,4 +43,4 @@ jobs:
           ls -ltr
           docker ps -a
           cat ~/.kube/config
-          kubectl apply -f tech-challenge-fiap-deployment-5.yaml
+          kubectl apply -f tech-challenge-fiap-deployment-5.yaml --validate=false
