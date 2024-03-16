@@ -41,4 +41,4 @@ jobs:
           kubectl config use-context github-action
           cd infrastructure
           ls -ltr
-          kubectl apply -f infrastructure/tech-challenge-fiap-deployment-5.yaml
+          kubectl apply -f tech-challenge-fiap-deployment-5.yaml
