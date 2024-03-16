@@ -39,4 +39,5 @@ jobs:
           kubectl config set-credentials ${{ secrets.USERNAME }} --token=${{ secrets.EKS_TOKEN }}
           cd infrastructure
           cat ~/.kube/config
+          kubectl get svc
           kubectl apply -f tech-challenge-fiap-deployment-5.yaml
