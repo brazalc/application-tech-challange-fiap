@@ -36,10 +36,10 @@ jobs:
           aws --version
       - name: Deploy to EKS
         run: |
-          kubectl config set-cluster eks --server=${{ secrets.EKS_SERVER }}
-          kubectl config set-credentials github-action --token=${{ secrets.EKS_TOKEN }}
-          kubectl config set-context github-action --cluster=eks --user=github-action
-          kubectl config use-context github-action
+#          kubectl config set-cluster eks --server=${{ secrets.EKS_SERVER }}
+#          kubectl config set-credentials github-action --token=${{ secrets.EKS_TOKEN }}
+#          kubectl config set-context github-action --cluster=eks --user=github-action
+#          kubectl config use-context github-action
           cd infrastructure
           cat ~/.kube/config
           kubectl apply -f tech-challenge-fiap-deployment-5.yaml
