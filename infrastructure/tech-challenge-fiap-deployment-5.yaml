@@ -17,7 +17,7 @@ spec:
       containers:
         - name: fiap-tech-challenge
           image: 'tech-challenge:latest'
-          imagePullPolicy: Never
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           livenessProbe:
