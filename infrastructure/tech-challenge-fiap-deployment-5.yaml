@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: fiap-tech-challenge
-          image: 'tech-challenge:latest'
+          image: 'ufoindustry/tech-challenge:latest'
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
