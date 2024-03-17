@@ -38,7 +38,6 @@ jobs:
         run: |
           aws eks --region ${{secrets.AWS_REGION}} update-kubeconfig --name ${{secrets.EKS_CLUSTER_NAME}}
           TOKEN=$(aws eks get-token --cluster-name ${{secrets.EKS_CLUSTER_NAME}} --region ${{secrets.AWS_REGION}} --output json | jq -r '.status.token')
-          echo "::set-env name=KUBE_TOKEN::$TOKEN"
           kubectl config set-credentials ${{secrets.USERNAME}} --token=$TOKEN
           cd infrastructure
           cat ~/.kube/config
