@@ -46,4 +46,3 @@ jobs:
           kubectl apply -f postgres-service-4.yaml
           kubectl apply -f tech-challenge-fiap-deployment-5.yaml
           kubectl apply -f tech-challenge-fiap-service-6.yaml
-          kubectl get pods
